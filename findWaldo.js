@@ -1,9 +1,16 @@
+
+
+
+
 function findWaldo(arr, found) {
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] === "Waldo") {
-      found([i]);   // execute callback
-    }
+
+ arr.forEach(function(element, index) {
+    if (element === "Waldo") {
+      found(index);   // execute callback
   }
+ });
+
+
 }
 
 function actionWhenFound(index) {
@@ -11,4 +18,12 @@ function actionWhenFound(index) {
 }
 
 findWaldo(["Alice", "Bob", "Winston", "Waldo"], actionWhenFound);
+// ["Alice", "Bob", "Winston", "Waldo"].forEach(findWaldo());
 
+
+
+// var arr = [1, 2, 3, 4];
+
+// arr.forEach(function(element) {
+//   console.log(element);
+// });
